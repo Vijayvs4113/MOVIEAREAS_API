@@ -1,9 +1,13 @@
 // const express = require("express")
 import express from "express"
 import movieroute from './routes/movies.routes.js'
+import connectDB from "./lib/db.js";
 
 const app = express();
-const port = 3000
+const port = 3000;
+
+//connectDB
+connectDB();
 
 
 app.get("/", (req,res) => {
